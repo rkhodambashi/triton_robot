@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="triton_robot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0036759 -0.0003172 -0.031779"
+        rpy="0 0 0" />
+      <mass
+        value="12.692" />
+      <inertia
+        ixx="0.057463"
+        ixy="-2.4854E-06"
+        ixz="-4.1083E-05"
+        iyy="0.037198"
+        iyz="0.00050399"
+        izz="0.036575" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find triton_robot)/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find triton_robot)/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="xAxis_Link">
+    <inertial>
+      <origin
+        xyz="-0.0008717 0.24484 0.0031728"
+        rpy="0 0 0" />
+      <mass
+        value="14.702" />
+      <inertia
+        ixx="0.046624"
+        ixy="0.00032378"
+        ixz="-2.4756E-06"
+        iyy="0.044139"
+        iyz="-4.1594E-05"
+        izz="0.072246" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find triton_robot)/meshes/xAxis_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.79216 0.79216 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find triton_robot)/meshes/xAxis_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="xAxis_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0.90482 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="xAxis_Link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="yAxis_Link">
+    <inertial>
+      <origin
+        xyz="4.2192E-05 0.18171 -1.7131E-06"
+        rpy="0 0 0" />
+      <mass
+        value="5.3752" />
+      <inertia
+        ixx="0.021165"
+        ixy="-0.0001797"
+        ixz="7.5853E-09"
+        iyy="0.039416"
+        iyz="-4.8534E-07"
+        izz="0.05013" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find triton_robot)/meshes/yAxis_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find triton_robot)/meshes/yAxis_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="yAxis_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0005 0.3 -0.0005"
+      rpy="-0.16097 -1.5708 0.16265" />
+    <parent
+      link="xAxis_Link" />
+    <child
+      link="yAxis_Link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.5"
+      upper="1.5"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="lnbAxis_Link">
+    <inertial>
+      <origin
+        xyz="-9.8226E-05 0.29677 0.00021299"
+        rpy="0 0 0" />
+      <mass
+        value="61.926" />
+      <inertia
+        ixx="8.2353"
+        ixy="0.00035187"
+        ixz="-0.00040302"
+        iyy="15.117"
+        iyz="-0.0010764"
+        izz="8.2403" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find triton_robot)/meshes/lnbAxis_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.84706 0.84706 0.84706 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find triton_robot)/meshes/lnbAxis_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lnbAxis_joint"
+    type="fixed">
+    <origin
+      xyz="0.0005 0.18799 0"
+      rpy="0 0 0" />
+    <parent
+      link="yAxis_Link" />
+    <child
+      link="lnbAxis_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
